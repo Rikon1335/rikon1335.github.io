@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Research portfolio of Md Roknuzzaman Rikon, RF and antenna engineering, Avionics Engineering, AAUB.">
+<style>[hidden]{display:none!important}img{max-width:100%}</style>
+<title>Md Roknuzzaman Rikon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: classic personal academic website. Textured sage page, white content panel, tabbed pages, dark green contact footer. Deliberately single (light) theme. */
+:root{
+  --page:#CFE6C4; --line:#BCD9AE; --panel:#FFFFFF; --ink:#26302A; --muted:#5E6B62;
+  --green:#2F7A32; --deep:#245E27; --teal:#5BC8C4; --rule:#DDE8D8; --soft:#F2F8EF;
+  --ph:#C9600E;
+  --head:"Raleway","Segoe UI",Helvetica,Arial,sans-serif;
+  --body:"Open Sans","Segoe UI",Helvetica,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font-family:var(--body);font-size:15.5px;line-height:1.65;
+  background-color:var(--page);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='60' viewBox='0 0 14 60'%3E%3Cpath d='M7 0 C 10 10, 4 20, 7 30 S 10 50, 7 60' fill='none' stroke='%23B5D6A6' stroke-width='1'/%3E%3C/svg%3E");}
+a{color:var(--green)}
+a:hover{color:var(--deep)}
+:focus-visible{outline:2px solid var(--deep);outline-offset:2px}
+.gut{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.inner{max-width:1040px;margin:0 auto}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--panel)}
+
+/* top bar */
+.top{background:var(--panel);border-bottom:1px solid var(--rule);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+.top .inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;flex-wrap:wrap}
+.brand{font-family:var(--head);font-weight:700;font-size:21px;color:var(--deep);letter-spacing:.01em;text-decoration:none}
+.brand small{display:block;font-family:var(--body);font-weight:400;font-size:12.5px;color:var(--muted);letter-spacing:.04em}
+.tabs{display:flex;gap:2px;flex-wrap:wrap}
+.tabs a{font-family:var(--head);font-weight:600;font-size:14px;color:var(--ink);text-decoration:none;padding:7px 12px;border-bottom:2px solid transparent}
+.tabs a:hover{color:var(--green)}
+.tabs a.on{color:var(--green);border-bottom-color:var(--green)}
+
+/* panel */
+main{padding-block:34px 44px}
+.panel{background:var(--panel);max-width:1040px;margin:0 auto;padding:40px 48px 46px;box-shadow:0 1px 0 var(--line)}
+.page[hidden]{display:none!important}
+h1{font-family:var(--head);font-weight:700;font-size:clamp(28px,4.6vw,40px);line-height:1.15;color:var(--deep);margin:0 0 6px;text-wrap:balance}
+h2{font-family:var(--head);font-weight:700;font-size:26px;color:var(--deep);margin:0 0 20px;text-wrap:balance}
+h2::after{content:"";display:block;width:56px;height:3px;background:var(--teal);margin-top:10px}
+h3{font-family:var(--head);font-weight:700;font-size:18.5px;color:var(--ink);margin:0 0 4px;line-height:1.35;text-wrap:balance}
+h4{font-family:var(--head);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:28px 0 10px}
+ul{margin:6px 0 0;padding-left:20px}
+li{margin:4px 0}
+.ph{color:var(--ph);font-style:italic}
+.meta{color:var(--muted);font-size:14px}
+.lead{font-size:17px;color:var(--muted);margin:0 0 18px}
+
+/* home */
+.home{display:grid;grid-template-columns:260px minmax(0,1fr);gap:40px;align-items:start}
+.photo{display:block;width:100%;aspect-ratio:4/5;max-width:260px;object-fit:cover;object-position:center top;border:6px solid var(--panel);outline:1px solid var(--rule);box-shadow:0 2px 10px rgba(36,94,39,.15)}
+.tabs a.cv{border:1.5px solid var(--green);border-radius:2px;color:var(--green);margin-left:6px}
+.tabs a.cv:hover{background:var(--green);color:#fff}
+img.pic{border:0;padding:0;display:block;object-fit:cover;height:auto;box-shadow:0 0 0 1px var(--rule)}
+.quick{margin-top:16px;font-size:14px;display:grid;gap:4px}
+.quick b{font-weight:600;color:var(--deep)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-block;font-family:var(--head);font-weight:600;font-size:14px;padding:9px 18px;border-radius:2px;text-decoration:none;border:1.5px solid var(--green);color:var(--green);background:var(--panel);cursor:pointer}
+.btn.fill{background:var(--green);color:#fff}
+.btn:hover{background:var(--deep);border-color:var(--deep);color:#fff}
+.interests{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.interests span{background:var(--soft);border:1px solid var(--rule);padding:4px 12px;font-size:14px}
+
+/* education */
+.edu{display:grid;gap:18px}
+.edu .item{display:grid;grid-template-columns:110px minmax(0,1fr);gap:16px;padding-bottom:18px;border-bottom:1px solid var(--rule)}
+.edu .yr{font-family:var(--head);font-weight:700;color:var(--green);font-size:16px}
+
+/* research */
+.proj{padding:22px 0;border-bottom:1px solid var(--rule)}
+.proj:first-of-type{padding-top:0}
+.tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--green);padding:2px 9px;margin-bottom:8px}
+.tag.alt{background:var(--teal);color:var(--deep)}
+.tag.gray{background:var(--rule);color:var(--ink)}
+.specs{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px}
+.specs span{font-size:13px;border:1px solid var(--rule);padding:1px 8px;color:var(--deep);background:var(--soft)}
+
+/* publications */
+.pub{padding:16px 18px;background:var(--soft);border-left:3px solid var(--green);margin-bottom:14px}
+.pub .k{font-family:var(--head);font-weight:700;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:4px}
+
+.skills{width:100%;border-collapse:collapse;margin-top:6px}
+.skills td{padding:9px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.skills td:first-child{width:30%;font-weight:600;color:var(--deep);padding-right:16px}
+
+/* gallery */
+.figs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 18px}
+figure{margin:0;min-width:0}
+.frame{width:100%;aspect-ratio:4/3;max-width:100%;background:#fff;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;padding:8px;cursor:zoom-in}
+.frame:hover{border-color:var(--teal)}
+.frame img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.phframe{aspect-ratio:4/3;border:2px dashed var(--ph);background:#FFF8F1;display:flex;align-items:center;justify-content:center;text-align:center;padding:14px;font-size:14px}
+figcaption{font-size:13.5px;color:var(--muted);margin-top:7px;line-height:1.45}
+figcaption b{color:var(--deep)}
+.note{font-size:14px;color:var(--muted);margin:-8px 0 20px}
+
+/* awards */
+.cert{display:grid;grid-template-columns:300px minmax(0,1fr);gap:26px;align-items:start}
+.cert .frame{aspect-ratio:auto;padding:5px}
+.docs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px 18px;margin-bottom:6px}
+.docs.two{grid-template-columns:repeat(2,minmax(0,1fr));max-width:720px}
+.frame.doc{position:relative;background:#F6F8F5}
+.frame.doc img{box-shadow:0 1px 4px rgba(0,0,0,.18)}
+.pg{position:absolute;right:8px;bottom:8px;background:var(--deep);color:#fff;font-size:11.5px;font-weight:600;padding:1px 7px;border-radius:2px}
+.lb .nav{display:flex;gap:14px;align-items:center;margin-top:12px;color:#fff;font-size:13.5px}
+.lb .nav[hidden]{display:none}
+.lb .nav button{font:600 14px var(--body);background:transparent;color:#fff;border:1px solid rgba(255,255,255,.7);padding:4px 14px;cursor:pointer;border-radius:2px}
+.lb .nav button:hover{background:#fff;color:var(--deep)}
+
+/* references */
+.refs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.ref{border:1px solid var(--rule);border-top:3px solid var(--green);padding:18px;min-width:0;overflow-wrap:anywhere;font-size:14.5px;line-height:1.55}
+.ref b{font-family:var(--head);font-size:16px;color:var(--ink);display:block;margin-bottom:4px}
+.ref .role{margin-top:10px;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--green)}
+
+/* footer */
+footer{background:var(--green);color:#fff;padding-block:34px 38px}
+footer .inner{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.fi{display:flex;gap:14px;align-items:flex-start;min-width:0}
+.ic{flex:0 0 52px;width:52px;height:52px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center}
+.ic svg{width:26px;height:26px;stroke:var(--deep);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.fi div{min-width:0;overflow-wrap:anywhere;font-size:14px;line-height:1.55}
+.fi .lab{font-family:var(--head);font-weight:700;font-size:15px;margin-bottom:2px}
+footer a{color:#fff}
+footer a:hover{color:#E3F7F5}
+.copy{font:600 11.5px var(--body);background:transparent;border:1px solid rgba(255,255,255,.6);color:#fff;padding:1px 8px;margin-left:4px;cursor:pointer;border-radius:2px}
+.soc{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.soc a{border:1px solid rgba(255,255,255,.7);padding:2px 10px;text-decoration:none;font-size:13px;border-radius:2px}
+.soc a:hover{background:#fff;color:var(--green)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:20;background:rgba(18,32,20,.88);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 16px;cursor:zoom-out}
+.lb img{max-width:min(1100px,100%);max-height:80vh;background:#fff;padding:10px}
+.lb[hidden]{display:none!important}
+.lb p{color:#fff;font-size:14px;max-width:720px;text-align:center;margin:12px 0 0}
+
+@media (max-width:860px){
+  .panel{padding:28px 22px 34px}
+  .home{grid-template-columns:1fr;gap:24px}
+  .photo{max-width:200px}
+  .figs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .refs{grid-template-columns:1fr}
+  .cert{grid-template-columns:1fr}
+  .docs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cert .frame{max-width:340px}
+  footer .inner{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:480px){
+  main{padding-block:16px 28px}
+  .panel{padding:22px 16px 28px}
+  .figs{grid-template-columns:1fr}
+  .edu .item{grid-template-columns:1fr;gap:2px}
+  .skills td{display:block;width:100%!important;border-bottom:none;padding:2px 0}
+  .skills tr{display:block;padding:8px 0;border-bottom:1px solid var(--rule)}
+  footer .inner{grid-template-columns:1fr}
+  .tabs a{padding:6px 8px;font-size:13.5px}
+}
+</style>
+</head>
+<body>
+
+<header class="top gut"><div class="inner">
+  <a class="brand" href="#home">Md Roknuzzaman Rikon<small>RF &amp; Antenna Engineering · Avionics, AAUB</small></a>
+  <nav class="tabs" aria-label="Pages">
+    <a href="#home">Home</a><a href="#education">Education</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#gallery">Gallery</a><a href="#awards">Awards</a><a href="#references">References</a><a class="cv" href="cv.pdf" target="_blank" rel="noopener">CV</a>
+  </nav>
+</div></header>
+
+<main class="gut">
+<div class="panel">
+
+<!-- HOME -->
+<section class="page" id="p-home">
+  <div class="home">
+    <div>
+      <img class="photo pic" src="img/profile.jpg" alt="Md Roknuzzaman Rikon">
+      <div class="quick">
+        <div><b>Position:</b> Research Assistant, AAUB</div>
+        <div><b>Degree:</b> B.Sc. Avionics Engineering</div>
+        <div><b>CGPA:</b> 3.37 / 4.00</div>
+        <div><b>Based in:</b> Dhaka, Bangladesh</div>
+      </div>
+    </div>
+    <div>
+      <h1>Md Roknuzzaman Rikon</h1>
+      <p class="lead">Avionics Engineering graduate working on antennas for aviation and wearable systems.</p>
+      <h4 style="margin-top:6px">About</h4>
+      <ul>
+        <li>B.Sc. in Avionics Engineering, Aviation and Aerospace University, Bangladesh (AAUB), graduated 15 July 2026.</li>
+        <li>Research Assistant, Dept. of Avionics Engineering, AAUB, designing a 2.4 GHz phased-array antenna with electronic beam steering for a radar system.</li>
+        <li>Focus: microstrip patch antenna design, AMC metasurface integration and machine learning-assisted antenna optimization.</li>
+        <li>Paper presented at IEEE MARSCON 2026; undergraduate thesis being developed into a journal manuscript.</li>
+        <li>Seeking PhD positions abroad in antenna / RF engineering, and roles in the aviation and aerospace sector.</li>
+      </ul>
+      <h4>Research Interests</h4>
+      <div class="interests">
+        <span>Microstrip patch antennas</span><span>Wearable antennas</span><span>Reconfigurable antennas</span><span>Implantable antennas</span><span>AMC / metasurface-integrated antennas</span><span>Phased arrays &amp; beamforming</span><span>ML-assisted antenna optimization</span>
+      </div>
+      <div class="btns">
+        <a class="btn fill" href="cv.pdf" target="_blank" rel="noopener">View CV (PDF)</a>
+        <a class="btn" href="#research">View research</a>
+        <a class="btn" href="#publications">Publications</a>
+        <a class="btn" href="https://www.linkedin.com/in/md-roknuzzaman-rikon-b95375262/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="page" id="p-education" hidden>
+  <h2>Education</h2>
+  <div class="edu">
+    <div class="item"><div class="yr">2022 – 2026</div><div><h3>B.Sc. in Avionics Engineering</h3><div>Aviation and Aerospace University, Bangladesh (AAUB)</div><div class="meta">CGPA 3.37 / 4.00 · Graduated 15 July 2026 · Thesis supervisor: Md. Abu Bakar Siddik</div></div></div>
+    <div class="item"><div class="yr">2020</div><div><h3>Higher Secondary Certificate (HSC)</h3><div>Moqbular Rahman Govt. College, Panchagarh</div><div class="meta">GPA 5.00 / 5.00</div></div></div>
+    <div class="item"><div class="yr">2018</div><div><h3>Secondary School Certificate (SSC)</h3><div><a href="https://www.facebook.com/fhsac" target="_blank" rel="noopener">Futkibari High School &amp; College</a></div><div class="meta">GPA 5.00 / 5.00</div></div></div>
+  </div>
+
+  <h4>Academic Documents</h4>
+  <p class="note" style="margin:-4px 0 14px">Click a document to view it. Multi-page documents open with page arrows.</p>
+  <div class="docs">
+    <figure><button class="frame doc" type="button" data-pages="img/docs/bsc_prov.jpg"><img loading="lazy" src="img/docs/t_bsc_prov.jpg" alt="B.Sc. Provisional Certificate"></button><figcaption><b>B.Sc. Provisional Certificate</b><br>AAUB · Avionics Engineering · CGPA 3.37</figcaption></figure>
+    <figure><button class="frame doc" type="button" data-pages="img/docs/tr1.jpg|img/docs/tr2.jpg|img/docs/tr3.jpg|img/docs/tr4.jpg|img/docs/tr5.jpg"><img loading="lazy" src="img/docs/t_tr1.jpg" alt="B.Sc. Academic Transcript"><span class="pg">5 pages</span></button><figcaption><b>B.Sc. Academic Transcript</b><br>AAUB · 8 semesters</figcaption></figure>
+    <figure><button class="frame doc" type="button" data-pages="img/docs/testimonial.jpg"><img loading="lazy" src="img/docs/t_testimonial.jpg" alt="Testimonial, Department of Avionics Engineering"></button><figcaption><b>Testimonial</b><br>Dept. of Avionics Engineering, AAUB</figcaption></figure>
+    <figure><button class="frame doc" type="button" data-pages="img/docs/moi.jpg"><img loading="lazy" src="img/docs/t_moi.jpg" alt="Certificate of Medium of Instruction"></button><figcaption><b>Medium of Instruction Certificate</b><br>Medium of instruction: English</figcaption></figure>
+    <figure><button class="frame doc" type="button" data-pages="img/docs/hsc_cert.jpg|img/docs/hsc_tr.jpg"><img loading="lazy" src="img/docs/t_hsc_cert.jpg" alt="HSC Certificate and Transcript"><span class="pg">2 pages</span></button><figcaption><b>HSC Certificate &amp; Transcript</b><br>2020 · GPA 5.00 / 5.00</figcaption></figure>
+    <figure><button class="frame doc" type="button" data-pages="img/docs/ssc_cert.jpg|img/docs/ssc_tr.jpg"><img loading="lazy" src="img/docs/t_ssc_cert.jpg" alt="SSC Certificate and Transcript"><span class="pg">2 pages</span></button><figcaption><b>SSC Certificate &amp; Transcript</b><br>2018 · GPA 5.00 / 5.00</figcaption></figure>
+    <figure><button class="frame doc" type="button" data-pages="img/docs/jsc.jpg"><img loading="lazy" src="img/docs/t_jsc.jpg" alt="JSC Certificate"></button><figcaption><b>JSC Certificate</b><br>2015 · GPA 4.50 / 5.00</figcaption></figure>
+  </div>
+
+  <h4>Technical Skills</h4>
+  <table class="skills">
+    <tr><td>EM simulation</td><td>CST Studio Suite</td></tr>
+    <tr><td>Circuit simulation</td><td>Proteus; Keysight ADS (equivalent-circuit modelling, thesis)</td></tr>
+    <tr><td>Programming</td><td>Python, MATLAB/Simulink, C/C++</td></tr>
+    <tr><td>Hardware</td><td>Arduino</td></tr>
+    <tr><td>Machine learning</td><td>Linear Regression, Random Forest, Gradient Boosting, Stacking regression; surrogate modelling</td></tr>
+    <tr><td>RF &amp; antennas</td><td>Microstrip and wearable antennas, AMC/metasurface unit-cell design, SAR analysis, PIN-diode reconfiguration, antenna arrays and beamforming</td></tr>
+    <tr><td>Signal processing</td><td>Signal acquisition, filtering, signal analysis, DSP</td></tr>
+  </table>
+</section>
+
+<!-- RESEARCH -->
+<section class="page" id="p-research" hidden>
+  <h2>Research Projects</h2>
+
+  <article class="proj">
+    <span class="tag">Ongoing · Aug 2026 – Present</span>
+    <h3>2.4 GHz Phased-Array Antenna with Electronic Beam Steering for Radar</h3>
+    <div class="meta">Research Assistant, Dept. of Avionics Engineering, AAUB</div>
+    <ul>
+      <li>Designing a 2.4 GHz phased-array antenna whose beam is steered electronically, for a radar system.</li>
+      <li>Array design and beamforming in CST Studio Suite and MATLAB.</li>
+      <li>Studying element spacing and phase excitation for beam steering, pattern control and sidelobe reduction.</li>
+      <li>Exploring simulation-based and ML-assisted optimization of array parameters.</li>
+    </ul>
+  </article>
+
+  <article class="proj">
+    <span class="tag alt">Undergraduate Thesis · Jul 2025 – Jul 2026</span>
+    <h3>Dual-Band Metasurface Wearable Antenna for Pilot Health Monitoring</h3>
+    <div class="meta">Supervisor: Md. Abu Bakar Siddik · Co-authors: Md Rashid Karim, Md. Sakib Hossain Porosh</div>
+    <div class="specs"><span>2.45 GHz ISM</span><span>5.8 GHz ISM</span><span>FR-4 · 30 × 14 × 1.6 mm³</span><span>3 × 3 AMC</span></div>
+    <ul>
+      <li>BAF emblem-shaped dual-band microstrip patch antenna for on-body sensing (2.45 GHz) and an off-body cockpit link (5.8 GHz).</li>
+      <li>Four-stage geometry evolution and parametric studies of the partial ground plane in CST Studio Suite.</li>
+      <li>Dual-band coplanar AMC unit cell arranged as a 3 × 3 array behind the antenna, with a 3.25 mm foam spacer.</li>
+      <li>On-body evaluation on a four-layer phantom (denim, skin, fat, muscle); equivalent-circuit model in Keysight ADS.</li>
+      <li>Simulated: realized gain 4.52 / 6.93 dBi; peak 10 g SAR reduced from 10.93 / 15.30 W/kg to 0.972 / 1.609 W/kg (2.45 / 5.8 GHz), below the ICNIRP 2 W/kg limit.</li>
+      <li>Simulation study; fabrication and measurement are future work. Manuscript in preparation for PIER.</li>
+    </ul>
+  </article>
+
+  <article class="proj">
+    <span class="tag">IEEE MARSCON 2026 · Paper ID 344</span>
+    <h3>ML-Assisted Frequency-Reconfigurable Trophy-Shaped Microstrip Antenna</h3>
+    <div class="specs"><span>UWB ~3.9–11.5 GHz</span><span>2 PIN diodes · 3 modes</span><span>RT/duroid 5880 · 0.127 mm</span></div>
+    <ul>
+      <li>Compact CPW-fed trophy-shaped antenna on Rogers RT/duroid 5880 (ε<sub>r</sub> ≈ 2.2), 47 × 25 mm.</li>
+      <li>Three modes: UWB (~3.9–11.5 GHz), tri-band (~4.3 / 7.6 / 10.5 GHz) and asymmetric (~4.15 / 7.8 / 10.3 GHz).</li>
+      <li>Linear Regression, Random Forest, Gradient Boosting and Stacking surrogates trained on CST data (9 geometric inputs → 2 resonances + S11 depths).</li>
+      <li>Random Forest selected: R² = 0.986 / 0.997 (resonant frequencies) and 0.963 / 0.974 (S11 depths) on held-out CST samples.</li>
+      <li>Reported in the paper (simulated): radiation efficiency above 90%; gain up to about 4 dB in tri-band mode.</li>
+    </ul>
+  </article>
+
+  <article class="proj" style="border-bottom:0">
+    <span class="tag gray">Course Projects · 2024</span>
+    <h3>Communication &amp; Signal Processing</h3>
+    <ul>
+      <li><b>AM Superheterodyne Receiver</b>: RF amplifier, local oscillator, mixer, 455 kHz IF, detector and audio stages; simulated in Proteus.</li>
+      <li><b>Signal-Based Security Monitoring System</b>: MATLAB algorithms for signal acquisition, filtering and monitoring.</li>
+    </ul>
+  </article>
+</section>
+
+<!-- PUBLICATIONS -->
+<section class="page" id="p-publications" hidden>
+  <h2>Publications &amp; Presentations</h2>
+  <div class="pub"><div class="k">Conference paper</div>Md. Abu Bakar Siddik, <b>Md Roknuzzaman Rikon*</b>, Shahnaz Malik, Tamzidul Hoque Tahmid, Sabrina Nowrin Mim, “Design and Machine Learning-Assisted Optimization of a Compact Frequency-Reconfigurable Trophy-Shaped Microstrip Antenna for Multifunctional Communication,” <i>2026 IEEE Int. Conf. on Microwave, Antennas, RF and Sensors (MARSCON)</i>, AUST, Dhaka, Bangladesh, 13–14 Aug. 2026. Paper ID 344. <span class="ph">[Add: DOI / IEEE Xplore link once available]</span></div>
+  <div class="pub"><div class="k">Journal manuscript · in preparation</div><b>Md Roknuzzaman Rikon</b>, Md Rashid Karim, Md. Abu Bakar Siddik, Md. Sakib Hossain Porosh, “Dual-Band Metasurface-Backed Wearable Logo-Shaped Antenna for Pilot Health Monitoring,” to be submitted to <i>Progress In Electromagnetics Research (PIER)</i>.</div>
+  <div class="pub"><div class="k">Presentation</div>Presented the MARSCON paper at Ahsanullah University of Science and Technology, Dhaka, 13–14 Aug. 2026. Certificate of Presentation received.</div>
+</section>
+
+<!-- GALLERY -->
+<section class="page" id="p-gallery" hidden>
+  <h2>Figures &amp; Results</h2>
+  <p class="note">Click a figure to enlarge it. Thesis and MARSCON results are full-wave simulations from the respective manuscripts.</p>
+
+  <h4 style="margin-top:0">Thesis: dual-band BAF-emblem wearable antenna with AMC</h4>
+  <div class="figs">
+    <figure><button class="frame" type="button"><img src="img/th_geo.png" alt="BAF emblem-shaped patch, front view and 3D CST model"></button><figcaption><b>Fig. 1</b> BAF emblem-shaped patch: front view and 3D CST model.</figcaption></figure>
+    <figure><button class="frame" type="button"><img src="img/th_s11.png" alt="Simulated S11 in free space"></button><figcaption><b>Fig. 2</b> Simulated |S11| in free space, 1–7 GHz.</figcaption></figure>
+    <figure><button class="frame" type="button"><img src="img/th_ff.png" alt="Far-field patterns at 2.45 and 5.8 GHz"></button><figcaption><b>Fig. 3</b> Simulated far-field patterns (Phi = 90°) at 2.45 and 5.8 GHz.</figcaption></figure>
+    <figure><button class="frame" type="button"><img src="img/th_amc.png" alt="Antenna on 3x3 AMC array"></button><figcaption><b>Fig. 4</b> Antenna on the 3 × 3 AMC array: top view and side view with foam spacer.</figcaption></figure>
+    <figure><button class="frame" type="button"><img src="img/th_phantom.png" alt="Antenna and AMC on four-layer body phantom"></button><figcaption><b>Fig. 5</b> Antenna–AMC on the four-layer body phantom (denim, skin, fat, muscle).</figcaption></figure>
+    <figure><button class="frame" type="button"><img src="img/th_s11body.png" alt="S11 with AMC and body phantom"></button><figcaption><b>Fig. 6</b> Simulated |S11| with AMC and human-body phantom.</figcaption></figure>
+    <figure><button class="frame" type="button"><img src="img/th_sar.png" alt="10 g SAR distribution"></button><figcaption><b>Fig. 7</b> Simulated 10 g SAR distribution at 2.45 and 5.8 GHz.</figcaption></figure>
+    <figure><button class="frame" type="button"><img src="img/th_steps.png" alt="S11 across design steps"></button><figcaption><b>Fig. 8</b> |S11| across the four design steps (Ant I–IV).</figcaption></figure>
+  </div>
+
+  <h4>MARSCON 2026: reconfigurable trophy-shaped antenna with ML surrogate</h4>
+  <div class="figs">
+    <figure><button class="frame" type="button"><img src="img/pp_geo.png" alt="Trophy antenna geometry"></button><figcaption><b>Fig. 9</b> Antenna geometry with labelled parameters and CPW feed detail.</figcaption></figure>
+    <figure><button class="frame" type="button"><img src="img/pp_modes.png" alt="S11 for three PIN-diode modes"></button><figcaption><b>Fig. 10</b> Simulated S11 for the three PIN-diode modes.</figcaption></figure>
+    <figure><button class="frame" type="button"><img src="img/pp_steps.png" alt="S11 across design steps"></button><figcaption><b>Fig. 11</b> S11 across design steps 1–5.</figcaption></figure>
+    <figure><button class="frame" type="button"><img src="img/pp_m1.png" alt="Mode-1 directivity patterns"></button><figcaption><b>Fig. 12</b> Mode-1 (UWB) directivity patterns at 4.8 and 9.3 GHz.</figcaption></figure>
+    <figure><button class="frame" type="button"><img src="img/pp_ml.png" alt="ML workflow"></button><figcaption><b>Fig. 13</b> ML workflow and Random Forest surrogate input–output mapping.</figcaption></figure>
+    <figure><button class="frame" type="button"><img src="img/pp_rf.png" alt="Random Forest predicted vs actual"></button><figcaption><b>Fig. 14</b> Random Forest: predicted vs. actual on held-out CST samples.</figcaption></figure>
+  </div>
+
+</section>
+
+<!-- AWARDS -->
+<section class="page" id="p-awards" hidden>
+  <h2>Awards &amp; Certificates</h2>
+  <h4 style="margin-top:0">Recognition</h4>
+  <div class="docs two">
+    <figure><button class="frame doc" type="button" data-pages="img/cert.jpg"><img src="img/cert.jpg" alt="IEEE MARSCON 2026 Certificate of Presentation"></button><figcaption><b>Certificate of Presentation</b><br>IEEE MARSCON 2026, AUST, Dhaka · 13–14 Aug 2026</figcaption></figure>
+    <figure><button class="frame doc" type="button" data-pages="img/docs/aairc.jpg"><img loading="lazy" src="img/docs/t_aairc.jpg" alt="Certificate of Appreciation, AAUB AI and Robotics Club"></button><figcaption><b>Certificate of Appreciation</b><br>Contributor, AAUB AI &amp; Robotics Club (AAIRC) · 2023–2025</figcaption></figure>
+  </div>
+
+  <h4>Professional Development Courses</h4>
+  <div class="docs">
+    <figure><button class="frame doc" type="button" data-pages="img/docs/p2e_comm.jpg"><img loading="lazy" src="img/docs/t_p2e_comm.jpg" alt="Workplace Communication Essentials certificate"></button><figcaption><b>Workplace Communication Essentials</b><br>Passport to Earning Bangladesh (Generation Unlimited, UNICEF) · 27 Feb 2026</figcaption></figure>
+    <figure><button class="frame doc" type="button" data-pages="img/docs/p2e_money.jpg"><img loading="lazy" src="img/docs/t_p2e_money.jpg" alt="Smart Money Skills for Life certificate"></button><figcaption><b>Smart Money Skills for Life</b><br>Passport to Earning Bangladesh (Generation Unlimited, UNICEF) · 28 Feb 2026</figcaption></figure>
+    <figure><button class="frame doc" type="button" data-pages="img/docs/p2e_digital.jpg"><img loading="lazy" src="img/docs/t_p2e_digital.jpg" alt="Future Ready with Digital Skills certificate"></button><figcaption><b>Future Ready with Digital Skills</b><br>Passport to Earning Bangladesh (Generation Unlimited, UNICEF) · 28 Feb 2026</figcaption></figure>
+    <figure><button class="frame doc" type="button" data-pages="img/docs/p2e_problem.jpg"><img loading="lazy" src="img/docs/t_p2e_problem.jpg" alt="Art of Problem Definition certificate"></button><figcaption><b>Art of Problem Definition</b><br>Passport to Earning Bangladesh (Generation Unlimited, UNICEF) · 1 Mar 2026</figcaption></figure>
+  </div>
+
+  <div>
+    <div>
+      <h4>Industrial Training &amp; Exposure</h4>
+      <ul>
+        <li><b>Biman Bangladesh Airlines</b>, Engineering Division (2024, 1 month): airline engineering operations, aircraft systems, maintenance workflows.</li>
+        <li><b>Bangladesh Air Force</b>, Avionics Units 205, 207, 214, 216 (2024, 1 month): avionics, airborne communication and navigation, radar, EW and ground support systems.</li>
+        <li><b>Civil Aviation Authority of Bangladesh</b> (2026): facility visits covering ATC, ILS and VOR/DME.</li>
+        <li><b>Bangladesh Satellite Company Limited</b> (2026): ground station and TT&amp;C systems for Bangabandhu-1.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENCES -->
+<section class="page" id="p-references" hidden>
+  <h2>References</h2>
+  <div class="refs">
+    <div class="ref"><b>Md. Abu Bakar Siddik</b>Assistant Professor<br>Dept. of Avionics Engineering<br>Aviation and Aerospace University, Bangladesh<br>abubakarsiddik24@aaub.edu.bd<div class="role">Thesis Supervisor</div></div>
+    <div class="ref"><b>Air Cdre Dr. Mohammad Akhter Jamil</b>Chairman &amp; Professor<br>Dept. of Avionics Engineering<br>Aviation and Aerospace University, Bangladesh<br>jamil8703@aaub.edu.bd<div class="role">Research Supervisor</div></div>
+    <div class="ref"><b>Dr. S.M. Sadakatul Bari</b>Assistant Professor &amp; Chairman<br>Dept. of Aircraft Maintenance Engineering (Avionics), Faculty of Aviation Operations and Maintenance<br>Aviation and Aerospace University, Bangladesh<br>sms_bari@aaub.edu.bd<br>+880 1769-995099<div class="role">Course Teacher</div></div>
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer class="gut"><div class="inner">
+  <div class="fi"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div><div><div class="lab">Call</div>+880-1852500327</div></div>
+  <div class="fi"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/></svg></div><div><div class="lab">Contact</div><span id="em">rikon1335@gmail.com</span><button class="copy" id="copyEmail" type="button">Copy</button></div></div>
+  <div class="fi"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3"/></svg></div><div><div class="lab">Professional Profiles</div><div class="soc"><a href="https://www.linkedin.com/in/md-roknuzzaman-rikon-b95375262/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.facebook.com/rikon1335/" target="_blank" rel="noopener">Facebook</a></div></div></div>
+  <div class="fi"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 9.5a4 4 0 1 0 0 5"/></svg></div><div>© 2026 Md Roknuzzaman Rikon.<br>Dept. of Avionics Engineering, AAUB</div></div>
+</div></footer>
+
+<div class="lb" id="lb" hidden><img id="lbImg" alt=""><p id="lbCap"></p><div class="nav" id="lbNav" hidden><button type="button" id="lbPrev">‹ Prev</button><span id="lbCount"></span><button type="button" id="lbNext">Next ›</button></div></div>
+
+<script>
+(function(){
+  var names=['home','education','research','publications','gallery','awards','references'];
+  var tabs=[].slice.call(document.querySelectorAll('.tabs a'));
+  function show(name){
+    if(names.indexOf(name)<0) name='home';
+    names.forEach(function(n){document.getElementById('p-'+n).hidden=(n!==name)});
+    tabs.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+name)});
+  }
+  function route(scroll){show((location.hash||'').slice(1)); if(scroll) window.scrollTo(0,0)}
+  window.addEventListener('hashchange',function(){route(true)});
+  route(false);
+
+  var lb=document.getElementById('lb'), li=document.getElementById('lbImg'), lc=document.getElementById('lbCap');
+  var nav=document.getElementById('lbNav'), cnt=document.getElementById('lbCount'), pages=[], at=0;
+  function draw(){li.src=pages[at]; cnt.textContent='Page '+(at+1)+' of '+pages.length; nav.hidden=pages.length<2}
+  function step(d){if(pages.length<2)return; at=(at+d+pages.length)%pages.length; draw()}
+  document.querySelectorAll('button.frame').forEach(function(b){
+    b.addEventListener('click',function(){
+      var img=b.querySelector('img'), cap=b.parentElement.querySelector('figcaption');
+      pages=(b.getAttribute('data-pages')||img.getAttribute('src')).split('|'); at=0;
+      li.alt=img.alt; lc.textContent=cap?cap.innerText.replace(/\n+/g," · "):img.alt; draw(); lb.hidden=false;
+    });
+  });
+  document.getElementById('lbPrev').addEventListener('click',function(e){e.stopPropagation();step(-1)});
+  document.getElementById('lbNext').addEventListener('click',function(e){e.stopPropagation();step(1)});
+  li.addEventListener('click',function(e){if(pages.length>1){e.stopPropagation();step(1)}});
+  lb.addEventListener('click',function(){lb.hidden=true});
+  document.addEventListener('keydown',function(e){
+    if(lb.hidden)return;
+    if(e.key==='Escape')lb.hidden=true; else if(e.key==='ArrowRight')step(1); else if(e.key==='ArrowLeft')step(-1);
+  });
+
+  var btn=document.getElementById('copyEmail');
+  btn.addEventListener('click',function(){
+    function done(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy'},1600)}
+    function fallback(){var r=document.createRange();r.selectNodeContents(document.getElementById('em'));var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected'}
+    try{navigator.clipboard.writeText('rikon1335@gmail.com').then(done,fallback)}catch(e){fallback()}
+  });
+})();
+</script>
+
+</body>
+</html>
